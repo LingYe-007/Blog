@@ -1,0 +1,49 @@
+.container {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  background: rgb(255, 255, 255);
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.header {
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  height: 60px;
+  max-width: 1400px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: start;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.title > i {
+  margin:0 5px;
+  font-family:Calibri;
+  color:rgba(55,65,81,0.9);
+  font-size: 30px;
+  font-weight:500 ;
+}
+.title > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title > nav {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.active{
+  color: #007fff !important;
+}
+.title > nav a {
+  color: rgba(156,163,175,0.9);
+  padding: 0 25px;
+}

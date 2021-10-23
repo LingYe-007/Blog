@@ -1,9 +1,29 @@
 html,
 body {
+  width: 100%;
+  background: #f3f4f6;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+main {
+  padding: 5rem 0;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -14,3 +34,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2759081 */
+  src: url("//at.alicdn.com/t/font_2759081_riyz8d196er.woff2?t=1634981764537")
+      format("woff2"),
+    url("//at.alicdn.com/t/font_2759081_riyz8d196er.woff?t=1634981764537")
+      format("woff"),
+    url("//at.alicdn.com/t/font_2759081_riyz8d196er.ttf?t=1634981764537")
+      format("truetype");
+}
+
+
+

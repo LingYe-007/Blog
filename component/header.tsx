@@ -4,13 +4,8 @@ import styles from "../styles/Header.module.css";
 import Link from "next/Link";
 import { useRouter } from "next/router";
 
-interface childData {
-  current: string;
-}
-
 const Header: NextComponentType = () => {
   const router = useRouter();
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -44,7 +39,10 @@ const Header: NextComponentType = () => {
               </a>
             </Link>
             <Link href="/resume">
-              <a className={router.pathname == "/resume" ? styles.active : ""}>
+              <a
+                target="_blank"
+                className={router.pathname == "/resume" ? styles.active : ""}
+              >
                 简历
               </a>
             </Link>

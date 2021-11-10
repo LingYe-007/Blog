@@ -1,0 +1,56 @@
+.acticle {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 16px;
+  margin: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(243, 244, 246, 0.8);
+}
+.textContent {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* margin-bottom: 20px; */
+}
+.acticleName {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.introduce{
+    color:rgba(190, 190, 190, 1);
+}
+.visitor{
+    color: rgba(190, 190, 190, 1);
+}
+.acticleTitle {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+}
+.acticleTitle > div {
+  padding: 0 10px;
+}
+.acticleTitle :nth-child(1){
+    padding-left: 0px;
+}
+.acticleTitle :nth-child(2) {
+  color: rgba(190, 190, 190, 1);
+  border-left: 1px solid rgba(225, 225, 225, 1);
+  border-right: 1px solid rgba(225, 225, 225, 1);
+}
+.acticleTitle :nth-child(3) {
+  color: rgba(190, 190, 190, 1);
+}
+.acticleImg {
+  width: 150px;
+  /* height: 100%; */
+}
+.acticleImg > img {
+  height: 100%;
+  width: 100%;
+}

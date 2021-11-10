@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Header from "../component/header";
+import AboutMe from "./aboutMe";
 
 const Thoughts: NextPage = () => {
   return (
@@ -10,7 +11,9 @@ const Thoughts: NextPage = () => {
         <meta name='thoughts' content='灵野的随想'></meta>
       </Head>
       <Header/>
-      <main></main>
+      <main>
+        <AboutMe></AboutMe>
+      </main>
       <footer></footer>
     </div>
   );

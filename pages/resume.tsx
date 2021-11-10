@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import { useRouter} from "next/router";
 import Header from "../component/header";
+import IdCard from "../component/idCard";
 
 const Resume: NextPage = () => {
   return (
@@ -10,8 +10,11 @@ const Resume: NextPage = () => {
         <title>LingYe-My Experience</title>
         <meta name="description" content="灵野的简历"></meta>
       </Head>
-      <Header></Header>
-      <main></main>
+      <Header>
+      </Header>
+      <main>
+        <IdCard></IdCard>
+      </main>
       <footer></footer>
     </div>
   );

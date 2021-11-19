@@ -40,7 +40,6 @@ const Header: NextComponentType = () => {
             </Link>
             <Link href="/resume">
               <a
-                target="_blank"
                 className={router.pathname == "/resume" ? styles.active : ""}
               >
                 简历

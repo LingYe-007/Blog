@@ -6,6 +6,16 @@ import styles from "../styles/Home.module.css";
 import IdCard from "../component/idCard";
 import Acticle from "../component/acticle";
 
+const project = {
+  id:"123",
+  title: "小作文",
+  pubulishTime:"123",
+  type:'1232133',
+  userName: "伍勋高",
+  content:"123",
+  browseNumber:1231
+};
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -18,13 +28,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header></Header>
+      <div className={styles.mask}>
       <main className={styles.main}>
         <div className={styles.acticles}>
-          <Acticle></Acticle>
+          <Acticle {...project}></Acticle>
         </div>
         <IdCard></IdCard>
       </main>
-      {/* <footer className={styles.footer}></footer> */}
+      </div>
     </div>
   );
 };

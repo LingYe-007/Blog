@@ -12,7 +12,7 @@ const Thoughts: NextPage = () => {
       </Head>
       <Header/>
       <main>
-        <AboutMe></AboutMe>
+        
       </main>
       <footer></footer>
     </div>

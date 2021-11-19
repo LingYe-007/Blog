@@ -5,7 +5,7 @@ import { useState,useImperativeHandle} from "react";
 import styles from "../styles/imgToast.module.css";
 
 interface img {
-  ref:any,
+  Ref:any,
   src: string;
 }
 

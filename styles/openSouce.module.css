@@ -1,0 +1,55 @@
+.content {
+  padding: 20px 25px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  border-radius: 10px;
+  height: 250px;
+}
+.img {
+  padding: 20px 10px;
+  background: black;
+  /* width: 305px; */
+  height: 100%;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.img > img {
+  height: 100%;
+  vertical-align: middle;
+}
+.preContent {
+  font-size: 15px;
+  color: rgba(107, 114, 128, 0.9);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.preContent p {
+  margin: 0;
+}
+.preContent h5 {
+  color: black;
+  font-size: 18px;
+  margin: 0 0px;
+}
+.buttonList>:nth-child(1){
+    color: white;
+    font-weight: 700;
+    background: #3B82F6;
+    margin-right: 20px;
+}
+.buttonList>:nth-child(1):hover{
+    background: rgba(96,165,250,1);
+} 
+.buttonList>:nth-child(2):hover{
+    background: rgba(229,231,235,1);
+}
+
+.buttonList button{
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}

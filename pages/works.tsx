@@ -7,13 +7,15 @@ import AboutMe from "./aboutMe";
 import IdCard from "../component/idCard";
 
 const project = {
+  id: "123",
   image:
-    "https://git.kscampus.io:10443/web-react/course/raw/master/02-css-basics/imgs/grid_terms.png",
+    "https://ks3-cn-beijing.ksyuncs.com/lingye-space/image-20210924213538155.png",
   title: "校庆项目",
   introduce: "基于微信小程序开发的Ant-deSign",
   status: "维护中",
   github: "xxx",
   preview: "hahah",
+  supplement: "该项目是大二完成",
 };
 
 const Works: NextPage = () => {
@@ -24,13 +26,14 @@ const Works: NextPage = () => {
         <meta name="thoughts" content="灵野的随想"></meta>
       </Head>
       <Header />
+      <div className={styles.mask}>
       <main className={styles.main}>
         <div className={styles.projects}>
-          <OpenSouce openSource={project}></OpenSouce>
+          <OpenSouce {...project}></OpenSouce>
         </div>
         <IdCard />
       </main>
-      <footer className={styles.footer}></footer>
+      </div>
     </div>
   );
 };

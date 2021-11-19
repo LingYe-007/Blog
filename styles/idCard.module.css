@@ -3,7 +3,7 @@
   height: 100%;
 }
 .content {
-  margin: 0 30px;
+  margin-left:30px;
   right: 10px;
   position: relative;
   width: 236px;
@@ -50,6 +50,10 @@
   width: 80%;
   height: 80%;
   transition: ease-in-out 1.5s;
+}
+.contact>a:hover{
+  transform: rotate(540deg) !important;
+  transition: ease-in-out 0.5s !important;
 }
 .acticle {
   text-align: center;
@@ -101,6 +105,11 @@
   border-radius: 5px;
   border: solid 0.5px #60a5fa;
 }
+@media (max-width:1155px) {
+  .column{
+    display: none;
+  }
+}
 
 @font-face {
   font-family: "iconfont"; /* Project id 2759081 */
@@ -120,6 +129,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.iconfont :hover{
+  transform: rotate(180deg);
+  transition: ease-in-out 0.5s;
+}
 .iconQQ:before {
   content: "\e887";
 }

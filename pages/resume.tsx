@@ -2,6 +2,8 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Header from "../component/header";
 import IdCard from "../component/idCard";
+import Res from '../pages/markdown/resume.mdx'
+import styles from '../styles/resume.module.css'
 
 const Resume: NextPage = () => {
   return (
@@ -12,10 +14,12 @@ const Resume: NextPage = () => {
       </Head>
       <Header>
       </Header>
-      <main>
+      <div className={styles.mask}>
+      <main className={styles.main}>
+      <div className={styles.resume}><Res></Res></div>
         <IdCard></IdCard>
       </main>
-      <footer></footer>
+      </div>
     </div>
   );
 };

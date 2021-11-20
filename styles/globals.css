@@ -93,6 +93,9 @@ h6 {
   line-height: 1.4;
   cursor: text;
 }
+h2{
+  padding-bottom: 1rem;
+}
 h1:hover a.anchor,
 h2:hover a.anchor,
 h3:hover a.anchor,

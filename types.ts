@@ -1,5 +1,5 @@
 export interface IActicle {
-  id?: string;
+  _id?: string;
   title?: string;
   userName?: string;
   content?: string;
@@ -9,6 +9,14 @@ export interface IActicle {
   likes?: number;
   img?: string;
   browseNumber: number;
+}
+
+export interface thoughts {
+  img: string;
+  userName:string;
+  personLable:string;
+  content:string;
+  time:string;
 }
 
 export interface openSource {

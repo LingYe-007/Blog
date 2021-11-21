@@ -7,7 +7,7 @@ import styles from '../styles/resume.module.css'
 
 const Resume: NextPage = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>LingYe-My Experience</title>
         <meta name="description" content="灵野的简历"></meta>
@@ -16,7 +16,9 @@ const Resume: NextPage = () => {
       </Header>
       <div className={styles.mask}>
       <main className={styles.main}>
-      <div className={styles.resume}><Res></Res></div>
+      <div className={styles.resume}>
+        <Res></Res>
+        </div>
         <IdCard></IdCard>
       </main>
       </div>

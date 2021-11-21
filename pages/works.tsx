@@ -5,6 +5,7 @@ import styles from "../styles/works.module.css";
 import OpenSouce from "../component/openSouce";
 import AboutMe from "./aboutMe";
 import IdCard from "../component/idCard";
+import * as api from '../services/api'
 
 const project = {
   id: "123",
@@ -18,7 +19,8 @@ const project = {
   supplement: "该项目是大二完成",
 };
 
-const Works: NextPage = () => {
+const Works: NextPage = (props:any) => {
+  console.log(props)
   return (
     <div className={styles.container}>
       <Head>
@@ -37,5 +39,12 @@ const Works: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps(context: any) {
+  const res = await api.openSourceList();
+  return {
+    props: { res },
+  };
+}
 
 export default Works;

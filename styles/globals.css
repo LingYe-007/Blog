@@ -2,7 +2,7 @@ html,
 body {
   width: 100%;
   background: #f3f4f6;
-  overflow-x: hidden;
+  overflow-y: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -403,4 +403,3 @@ header, .context-menu, .megamenu-content, footer{
   background-color: #f5f8fa;
   background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
 }
-

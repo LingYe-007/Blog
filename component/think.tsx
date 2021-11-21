@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { NextComponentType } from "next";
 import styles from "../styles/think.module.css";
 import { thoughts } from "../types";
 
@@ -8,14 +7,17 @@ const Think: React.FC<thoughts> = (props: thoughts) => {
   return (
     <div className={styles.container}>
       <div className={styles.person}>
-          <div>
-          <img alt='' src='../public/avatar.png'></img>
-          </div>
-          <p>{userName}</p>
-          <p>{personLable}</p>
+          <img
+            alt=""
+            src="https://ks3-cn-beijing.ksyuncs.com/lingye-space/error.jpg"
+          ></img>
+        <div className={styles.mine}>
+        <p><b>{userName}</b></p>
+        <p>{personLable}</p>
+        </div>
       </div>
-       <p>{content}</p>
-       <p>{time}/</p>
+      <p>{content}</p>
+      <p>发布于 {time}/</p>
     </div>
   );
 };

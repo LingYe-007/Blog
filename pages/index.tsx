@@ -5,6 +5,7 @@ import Header from "../component/header";
 import styles from "../styles/Home.module.css";
 import IdCard from "../component/idCard";
 import Acticle from "../component/acticle";
+import * as api from '../services/api'
 
 const project = {
   id:"123",
@@ -16,7 +17,8 @@ const project = {
   browseNumber:1231
 };
 
-const Home: NextPage = () => {
+const Home: NextPage = (props:any) => {
+  console.log(props)
   return (
     <div className={styles.container}>
       <Head>
@@ -39,5 +41,12 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps(context: any) {
+  const res = await api.acticleList();
+  return {
+    props: { res },
+  };
+}
 
 export default Home;

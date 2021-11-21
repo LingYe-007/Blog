@@ -5,7 +5,7 @@ import styles from "../styles/works.module.css";
 import OpenSouce from "../component/openSouce";
 import AboutMe from "./aboutMe";
 import IdCard from "../component/idCard";
-import * as api from '../services/api'
+import * as api from "../services/api";
 
 const project = {
   id: "123",
@@ -19,8 +19,10 @@ const project = {
   supplement: "该项目是大二完成",
 };
 
-const Works: NextPage = (props:any) => {
-  console.log(props)
+const Works: NextPage = (props: any) => {
+  // console.log(props)
+  const works = props.res.data;
+  console.log(works);
   return (
     <div className={styles.container}>
       <Head>
@@ -29,12 +31,14 @@ const Works: NextPage = (props:any) => {
       </Head>
       <Header />
       <div className={styles.mask}>
-      <main className={styles.main}>
-        <div className={styles.projects}>
-          <OpenSouce {...project}></OpenSouce>
-        </div>
-        <IdCard />
-      </main>
+        <main className={styles.main}>
+          <div className={styles.projects}>
+            {works.map((item: any) => {
+              return <OpenSouce key={item._id} {...item}></OpenSouce>;
+            })}
+          </div>
+          <IdCard />
+        </main>
       </div>
     </div>
   );

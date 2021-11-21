@@ -9,7 +9,7 @@ const Think: React.FC<thoughts> = (props: thoughts) => {
       <div className={styles.person}>
           <img
             alt=""
-            src="https://ks3-cn-beijing.ksyuncs.com/lingye-space/error.jpg"
+            src="/avatar.png"
           ></img>
         <div className={styles.mine}>
         <p><b>{userName}</b></p>

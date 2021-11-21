@@ -18,7 +18,8 @@ const project = {
 };
 
 const Home: NextPage = (props:any) => {
-  console.log(props)
+  const acticles = props.res.data
+  console.log(acticles)
   return (
     <div className={styles.container}>
       <Head>
@@ -33,7 +34,8 @@ const Home: NextPage = (props:any) => {
       <div className={styles.mask}>
       <main className={styles.main}>
         <div className={styles.acticles}>
-          <Acticle {...project}></Acticle>
+          {acticles.map((item:any)=>{return <Acticle {...item} key={item.id}></Acticle>})}
+          {/* <Acticle {...project}></Acticle> */}
         </div>
         <IdCard></IdCard>
       </main>

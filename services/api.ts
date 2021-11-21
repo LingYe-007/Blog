@@ -6,7 +6,7 @@ export async function thoughtList() {
 }
 
 export async function openSourceList(){
-  let result = await post<BaseRes>('/api/v1/thoughts/list')
+  let result = await post<BaseRes>('/api/v1/opensource/list')
   return result.data
 }
 

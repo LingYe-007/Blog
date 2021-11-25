@@ -17,6 +17,9 @@
     flex-direction: column;
     justify-content: center;
 }
+.mine b{
+    color:rgba(17,24,39,0.8)
+}
 .person>img{
     /* height: 100%; */
     margin-right: 15px;

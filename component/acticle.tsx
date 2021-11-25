@@ -4,12 +4,13 @@ import styles from "../styles/acticle.module.css";
 import React, { useState, useEffect } from "react";
 import { IActicle } from "../types";
 import Link from "next/Link";
+import * as api from '../services/api'
 const Acticle: React.FC<IActicle> = (props: IActicle) => {
   const [md, hendleMd] = useState("loading");
-  const { id, title, userName, type, browseNumber, content, pubulishTime } =
+  const { _id, title, userName, type, browseNumber, content, pubulishTime } =
     props;
   return (
-    <Link href={"/post/" + id}>
+    <Link href={"/post/" + _id}>
       <a>
         <div className={styles.acticle}>
           <div className={styles.textContent}>
@@ -30,5 +31,7 @@ const Acticle: React.FC<IActicle> = (props: IActicle) => {
     </Link>
   );
 };
+  
+
 
 export default Acticle;

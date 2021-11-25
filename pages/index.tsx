@@ -5,21 +5,21 @@ import Header from "../component/header";
 import styles from "../styles/Home.module.css";
 import IdCard from "../component/idCard";
 import Acticle from "../component/acticle";
-import * as api from '../services/api'
+import * as api from "../services/api";
 
 const project = {
-  id:"123",
+  id: "123",
   title: "小作文",
-  pubulishTime:"123",
-  type:'1232133',
+  pubulishTime: "123",
+  type: "1232133",
   userName: "伍勋高",
-  content:"123",
-  browseNumber:1231
+  content: "123",
+  browseNumber: 1231,
 };
 
-const Home: NextPage = (props:any) => {
-  const acticles = props.res.data
-  console.log(acticles)
+const Home: NextPage = (props: any) => {
+  const acticles = props.res.data;
+  console.log(acticles);
   return (
     <div className={styles.container}>
       <Head>
@@ -32,13 +32,22 @@ const Home: NextPage = (props:any) => {
       </Head>
       <Header></Header>
       <div className={styles.mask}>
-      <main className={styles.main}>
-        <div className={styles.acticles}>
-          {acticles.map((item:any)=>{return <Acticle {...item} key={item.id}></Acticle>})}
-          {/* <Acticle {...project}></Acticle> */}
-        </div>
-        <IdCard></IdCard>
-      </main>
+        <input
+          type="file"
+          onChange={(e:any) => {
+           const file = e.target.files[0]
+           api.openSourceList();
+          }}
+        />
+        <main className={styles.main}>
+          <div className={styles.acticles}>
+            {acticles.map((item: any) => {
+              return <Acticle {...item} key={item.id}></Acticle>;
+            })}
+            {/* <Acticle {...project}></Acticle> */}
+          </div>
+          <IdCard></IdCard>
+        </main>
       </div>
     </div>
   );

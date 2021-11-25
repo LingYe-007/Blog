@@ -9,7 +9,7 @@
 }
 .img {
   padding: 6px 4px;
-  background: black;
+  background:rgba(17,24,39,0.8);
   /* width: 305px; */
   height: 100%;
   margin-right: 20px;
@@ -31,7 +31,7 @@
   margin: 0;
 }
 .preContent h5 {
-  color: black;
+  color:rgba(17,24,39,0.8);
   font-size: 18px;
   margin: 0 0px;
 }

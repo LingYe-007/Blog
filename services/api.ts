@@ -1,4 +1,3 @@
-import { Context } from "react-markdown/lib/ast-to-react";
 import { BaseRes, post } from "./request";
 
 export async function thoughtList() {
@@ -11,14 +10,17 @@ export async function openSourceList() {
   return result.data;
 }
 
-export async function acticleList() {
+export async function acticleList(filter?: {}) {
   let result = await post<BaseRes>("/api/v1/acticle/list");
   return result.data;
 }
 
-export async function upload(file: File,acticleId:string) {
+export async function upload(file: File, acticleId: string) {
   let result = await post<BaseRes>(
-    "/api/v1/file/upload?name=" + encodeURIComponent(file.name)+'&acticleId='+encodeURIComponent(acticleId),
+    "/api/v1/file/upload?name=" +
+      encodeURIComponent(file.name) +
+      "&acticleId=" +
+      encodeURIComponent(acticleId),
     file
   );
   return result.data;

@@ -5,11 +5,11 @@
   flex-direction: column;
   justify-content: center;
 }
-.padding{
+.padding {
   width: 100%;
   height: 20px;
 }
-.mask{
+.mask {
   flex: 1;
   display: flex;
   overflow-y: auto;
@@ -22,6 +22,25 @@
   flex-direction: row !important;
   /* justify-content: space-around; */
 }
+.author img {
+  width: 40px !important;
+  height: 50px;
+  border-radius: 50%;
+}
+.user{
+  display: flex;
+  flex-direction: column;
+}
+.user >:nth-child(2){
+  color: #909090;
+  font-size: 0.7rem;
+}
+.author {
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+}
 .acticles {
   flex: 1;
   max-width: 904px;
@@ -30,17 +49,26 @@
   height: max-content;
   background: #ffffff;
 }
+.acticles img {
+  width: 100%;
+}
 .mask::-webkit-scrollbar {
-  width: 8px;    
+  width: 8px;
   /*height: 4px;*/
 }
 .mask::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-  background: rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 .mask::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 0;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1155px) {
+  .menu {
+    display: none;
+  }
 }

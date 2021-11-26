@@ -7,13 +7,22 @@ const OpenSouce: React.FC<openSource> = (props: openSource) => {
     props;
   return (
     <div className={styles.content}>
-      {image?<div className={styles.img}>
-        <img src={image} alt="" />
-      </div>:""}
+      {image ? (
+        <a href={image}>
+          <div className={styles.img}>
+            <img src={image} alt="" />
+          </div>
+        </a>
+      ) : (
+        ""
+      )}
       <div className={styles.preContent}>
         <h5>{title}</h5>
         <p>{introduce}</p>
-        <span>项目状态:<span style={{color:'rgba(59, 130, 246, .8)'}}> {status}</span></span>
+        <span>
+          项目状态:
+          <span style={{ color: "rgba(59, 130, 246, .8)" }}> {status}</span>
+        </span>
         <div className={styles.buttonList}>
           <button>
             <a target="_blank" rel="noreferrer" href={preview}>

@@ -7,6 +7,7 @@ import IdCard from "../component/idCard";
 import Acticle from "../component/acticle";
 import * as api from "../services/api";
 
+
 const Home: NextPage = (props: any) => {
   const acticles = props.res.data;
   const acticleId = acticles[0]._id

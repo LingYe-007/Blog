@@ -1,44 +1,54 @@
+/* eslint-disable react/no-children-prop */
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import Header from "../../component/header";
 import IdCard from "../../component/idCard";
 import styles from "../../styles/post.module.css";
 import * as api from "../../services/api";
-import { GetStaticPaths } from "next";
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "../../component/CodeBlock";
+import MarkdownNavbar from "markdown-navbar";
+import "markdown-navbar/dist/navbar.css";
+// import { GetStaticPaths } from "next";
 import { IActicle } from "../../types";
 
+// ```jsx
 const Post: NextPage = (props: any) => {
-  console.log(props);
   const router = useRouter();
-  const { _id } = router.query;
+  const { md } = props;
+  // console.log(md);
   return (
     <div className={styles.container}>
       <Header></Header>
-      <main className={styles.main}>
-        <IdCard></IdCard>
-      </main>
+      <div className={styles.mask}>
+        <main className={styles.main}>
+          <div className={styles.acticles}>
+            <div className={styles.author}></div>
+            <ReactMarkdown
+              children={md}
+              renderers={{ CodeBlock }}
+            ></ReactMarkdown>
+          </div>
+          <div className="navigation">
+            <MarkdownNavbar  className="article-menu" source={md} />
+          </div>
+        </main>
+      </div>
     </div>
   );
 };
 
-// export const getStaticPaths: GetStaticPaths = async ({params:any}) => {
-//   // ...
-//   const _id = <params className="_id"></params>
-//   return {
-//     props:{ }
-//   }
-// }
 export async function getStaticPaths() {
   const res = await (await api.acticleList()).data;
   const paths = res.map((item: IActicle) => {
-  return  `/post/${item._id}`
+    return `/post/${item._id}`;
   });
   return { paths, fallback: false };
 }
 export async function getStaticProps({ params }: any) {
-  const res = await api.download(params.id);
+  const md = await api.download(params.id);
   return {
-    props: res,
+    props: { md: md },
   };
 }
 

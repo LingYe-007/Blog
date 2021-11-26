@@ -8,7 +8,6 @@ import * as api from "../services/api";
 
 const Thoughts: NextPage = (props:any) => {
   const thoughts = props.res.data
-  console.log(thoughts)
   return (
     <div>
       <Head>

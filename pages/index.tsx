@@ -7,19 +7,9 @@ import IdCard from "../component/idCard";
 import Acticle from "../component/acticle";
 import * as api from "../services/api";
 
-const project = {
-  id: "123",
-  title: "小作文",
-  pubulishTime: "123",
-  type: "1232133",
-  userName: "伍勋高",
-  content: "123",
-  browseNumber: 1231,
-};
-
 const Home: NextPage = (props: any) => {
   const acticles = props.res.data;
-  console.log(acticles);
+  const acticleId = acticles[0]._id
   return (
     <div className={styles.container}>
       <Head>
@@ -36,7 +26,7 @@ const Home: NextPage = (props: any) => {
           type="file"
           onChange={(e:any) => {
            const file = e.target.files[0]
-           api.openSourceList();
+           api.upload(file,acticleId);
           }}
         />
         <main className={styles.main}>
@@ -53,7 +43,7 @@ const Home: NextPage = (props: any) => {
   );
 };
 
-export async function getStaticProps(context: any) {
+export async function getStaticProps() {
   const res = await api.acticleList();
   return {
     props: { res },

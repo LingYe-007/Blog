@@ -16,16 +16,16 @@ export async function acticleList() {
   return result.data;
 }
 
-export async function upload(file: File) {
+export async function upload(file: File,acticleId:string) {
   let result = await post<BaseRes>(
-    "/api/v1/file/upload?name=" + encodeURIComponent(file.name),
+    "/api/v1/file/upload?name=" + encodeURIComponent(file.name)+'&acticleId='+encodeURIComponent(acticleId),
     file
   );
   return result.data;
 }
 export async function download(id: string) {
   let result = await post<BaseRes>("/api/v1/file/download?id=" + id);
-  return result.data 
+  return result.data;
 }
 
 export async function login(
